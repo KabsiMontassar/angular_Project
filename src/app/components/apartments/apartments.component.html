@@ -1,0 +1,11 @@
+<div>
+  <h2>List of Apartments</h2>
+  <ul>
+    <li *ngFor="let apartment of apartments">
+      <h3>{{ apartment.name }}</h3>
+      <p>Address: {{ apartment.address }}</p>
+      <p>Status: {{ apartment.status }}</p>
+      <button (click)="viewDetails(apartment)">View Details</button>
+    </li>
+  </ul>
+</div>

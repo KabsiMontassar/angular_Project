@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSubmit()" #residenceForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required [(ngModel)]="residence.name" name="name">
+  </div>
+  
+  <div>
+    <label for="address">Address:</label>
+    <input type="text" id="address" required [(ngModel)]="residence.address" name="address">
+  </div>
+  
+  <div>
+    <label for="image">Image URL:</label>
+    <input type="text" id="image" required [(ngModel)]="residence.image" name="image">
+  </div>
+  
+  <div>
+    <label for="status">Status:</label>
+    <select id="status" required [(ngModel)]="residence.status" name="status">
+      <option value="Disponible">Disponible</option>
+      <option value="Vendu">Vendu</option>
+      <option value="En Construction">En Construction</option>
+    </select>
+  </div>
+  
+  <button type="submit">Add Residence</button>
+</form>

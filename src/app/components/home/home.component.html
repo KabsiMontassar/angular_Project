@@ -1,0 +1,13 @@
+<div class="residences-list">
+  <h2>List of Residences</h2>
+  <ul>
+    <li *ngFor="let residence of filteredResidences">
+      <h3>{{ residence.name }}</h3>
+      <p>Address: {{ residence.address }}</p>
+      <p>Status: <span [style.color]="getColor(residence.status)">{{ residence.status }}</span></p>
+      <button (click)="getLocation(residence)">View Location</button>
+      <button (click)="addFavoris(residence)">Add to Favorites</button>
+      <a [routerLink]="['/residences', residence.id]">View Details</a>
+    </li>
+  </ul>
+</div>
